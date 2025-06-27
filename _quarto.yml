@@ -1,0 +1,57 @@
+project:
+  render:
+    - "*.qmd"
+  type: website
+  output-dir: docs
+
+website:
+  title: "Spruce Budworm Atmospheric Transport Model"
+  cookie-consent:
+    type: express
+    style: headline
+  google-analytics:
+    tracking-id: "G-XXXXXXX" ## TODO
+    anonymize-ip: true
+  open-graph: true
+  announcement:
+    icon: info-circle
+    dismissable: true
+    content: "This website is still under active development. Please report any issues to [achubaty@for-cast.ca](mailto:achubaty@for-cast.ca)"
+    type: primary
+    position: below-navbar
+  navbar:
+    background: primary
+    search: true
+    left:
+      - href: index.qmd
+        text: "Home"
+      - about.qmd
+      - href: model-description.qmd
+        text: "Model"
+      - publications.qmd
+      - contact.qmd
+  sidebar:
+    style: "docked"
+    contents:
+      - section: "Model Description"
+        href: model-description.qmd
+        contents:
+        - model-history.qmd
+        - model-details.qmd
+      - section: "Simulation Outputs"
+        href: simulations.qmd
+        contents:
+        - simulations-dispersal.qmd
+  page-footer: |
+    Copyright 2025 Spruce Budworm Atmospheric Transport Model Team.
+    Website developed by [FOR-CAST Research & Analytics](https://for-cast.ca) using [quarto](https://quarto.org).
+  repo-url: https://github.com/FOR-CAST/SBW-ATM
+  repo-actions: [edit, source, issue]
+
+format:
+  html:
+    theme:
+      - sandstone
+      - brand
+    css: styles.css
+    toc: true

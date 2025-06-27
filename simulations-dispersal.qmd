@@ -1,0 +1,78 @@
+---
+title: "Dispersal"
+listing:
+  - id: "dispersal-2022"
+    contents: outputs/dispersal/2022/*.gif
+    page-size: 3
+    template: gallery.ejs
+  - id: "dispersal-2023"
+    contents: outputs/dispersal/2023/*.gif
+    page-size: 3
+    template: gallery.ejs
+  - id: "dispersal-2024"
+    contents: outputs/dispersal/2024/*.gif
+    page-size: 3
+    template: gallery.ejs
+  - id: "dispersal-2025"
+    contents: outputs/dispersal/2025/*.gif
+    page-size: 3
+    template: gallery.ejs
+editor_options: 
+  chunk_output_type: console
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem nisl, dignissim nec tempus eget, aliquam ac eros. Pellentesque molestie ultrices nisl in efficitur. Donec ultricies, ex vulputate dictum molestie, felis ipsum porta neque, iaculis feugiat magna urna ac est. Sed id sem nec purus tristique sollicitudin. Quisque condimentum, lacus vitae tempor ullamcorper, metus neque vulputate lorem, blandit fringilla sapien ipsum a urna. Donec commodo aliquet felis eget sollicitudin. Vestibulum eu dui pellentesque, dignissim odio eget, imperdiet magna. Donec suscipit tristique malesuada. Nullam tincidunt in sem vitae dictum. Sed sodales lorem id ligula consectetur, quis pharetra augue tristique.
+
+Representative animations of simulation outputs are presented here for the latest dispersal years.
+
+**Please refer to the [Contact](contact.qmd) page for data requests.**
+
+```{r, echo = FALSE, eval = FALSE}
+## download the latest animations for each year
+
+library(googledrive)
+
+drive_folders <- data.frame(
+  year = 2022L:2025L,
+  gid = c(
+    "10GuWDdWQF3kHfBsng1KmOXwJRe4HabpP", ## 2022 dispersal
+    "15spzG5bbpkY9-B007ZsKr4diV7qDunhJ", ## 2023 dispersal
+    "133JchsL6xMWxf_XlmvVspxtXd1UZHOeu", ## 2024 dispersal
+    "1-Pyilgyql4Gg726Mh2yur3b4NqfHctON"  ## 2025 dispersal
+  )
+)
+
+purrr::walk2(
+  .x = drive_folders$gid,
+  .y = drive_folders$year,
+  .f = function(gid, year) {
+    foo <- drive_get(id = as_id(gid)) ## works...
+    
+    ## TODO: Error: Shared drive not found: 0AC0WNQwJG4HCUk9PVA -- app permissions issue?
+    foo$drive_resource[[1]]$isAppAuthorized ## FALSE
+    
+    # gifs <- drive_ls(path = as_id(gid), pattern = "[.]gif$")
+    ## TODO
+  }
+)
+```
+
+## 2025
+
+::: {#dispersal-2025}
+:::
+
+## 2024
+
+::: {#dispersal-2024}
+:::
+
+## 2023
+
+::: {#dispersal-2023}
+:::
+
+## 2022
+
+::: {#dispersal-2022}
+:::

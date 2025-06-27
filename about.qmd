@@ -1,0 +1,60 @@
+---
+title: "About"
+editor_options: 
+  chunk_output_type: console
+---
+
+## Program and Partnerships
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem nisl, dignissim nec tempus eget, aliquam ac eros. Pellentesque molestie ultrices nisl in efficitur. Donec ultricies, ex vulputate dictum molestie, felis ipsum porta neque, iaculis feugiat magna urna ac est. Sed id sem nec purus tristique sollicitudin. Quisque condimentum, lacus vitae tempor ullamcorper, metus neque vulputate lorem, blandit fringilla sapien ipsum a urna. Donec commodo aliquet felis eget sollicitudin. Vestibulum eu dui pellentesque, dignissim odio eget, imperdiet magna. Donec suscipit tristique malesuada. Nullam tincidunt in sem vitae dictum. Sed sodales lorem id ligula consectetur, quis pharetra augue tristique.
+
+This research was made possible through partnerships between the **Canadian Forest Service** and the **US Department of Agriculture Forest Service Research & Development**, fostered by the **Canada-US Forest Health Initiative "One Continent; One Forest; One Threat"** and the **Sustainable Forestry Initiative**, and supported financially by the **US Endowment for Forestry and Communities**.
+
+[![](images/nrcan-cfs.png){width="200"}](https://natural-resources.canada.ca/corporate/corporate-overview/canadian-forest-service)
+[![](images/usfs.png){width="200"}](https://research.fs.usda.gov/)
+[![](images/SFI_00001_new.svg){width="200"}](https://forests.org/)
+[![](images/use_logo-01.png){width="300"}](https://www.usendowment.org/)
+
+## Modelling team
+
+### Core members
+
+-   Barry J. Cooke (Canadian Forest Service)
+[{{< fa envelope >}}](mailto:barry.cooke@nrcan-rncan.gc.ca)
+[{{< fa globe >}}](https://cfs.nrcan.gc.ca/employees/read/bcooke)
+[{{< fa brands google-scholar >}}](https://scholar.google.com/citations?user=M07Zbt4AAAAJ&hl=en)
+
+-   Brian R. Sturtevant (USDA Forest Service)
+[{{< fa envelope >}}](mailto:brian.r.sturtevant@usda.gov)
+[{{< fa brands google-scholar >}}](https://scholar.google.ca/citations?user=gEmEYccAAAAJ&hl=en)
+
+-   Yan Boulanger (Canadian Forest Service)
+[{{< fa envelope >}}](mailto:yan.boulanger@nrcan-rncan.gc.ca)
+[{{< fa globe >}}](https://cfs.nrcan.gc.ca/employees/read/yboulang)
+[{{< fa brands google-scholar >}}](https://scholar.google.com/citations?user=WKzNUQsAAAAJ&hl=en)
+
+-   Rémi Saint-Amant (Canadian Forest Service)
+[{{< fa envelope >}}](mailto:remi.saint-amant@nrcan-rncan.gc.ca)
+[{{< fa globe >}}](https://cfs.nrcan.gc.ca/employees/read/rstamant)
+
+-   Jacques Régnière (Canadian Forest Service)
+[{{< fa envelope >}}](mailto:jacques.regniere@nrcan-rncan.gc.ca)
+[{{< fa globe >}}](https://cfs.nrcan.gc.ca/employees/read/jregnier)
+[{{< fa brands google-scholar >}}](https://scholar.google.com/citations?user=5WY6xsYAAAAJ&hl=fr)
+
+-   Matt Garcia (University of Wisconsin, Madison)
+[{{< fa envelope >}}](mailto:megarcia@wisc.edu)
+[{{< fa globe >}}](http://matthewgarcia.tech/)
+[{{< fa brands google-scholar >}}](https://scholar.google.com/citations?user=rBTszmoAAAAJ&hl=en)
+
+-   Mathieu Fortin (Canadian Forest Service)
+[{{< fa envelope >}}](mailto:mathieu.fortin@nrcan-rncan.gc.ca)
+[{{< fa globe >}}](https://cfs.nrcan.gc.ca/employees/read/matforti)
+[{{< fa brands google-scholar >}}](https://scholar.google.com/citations?user=XQ__SQoAAAAJ&hl=fr)
+
+### Contributors
+
+- Gary Achtmeier
+- Jay Charney
+- Dean Anderson
+- Johanne Delisle

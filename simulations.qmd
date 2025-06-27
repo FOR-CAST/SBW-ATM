@@ -1,0 +1,13 @@
+---
+title: "Simulations"
+editor_options: 
+  chunk_output_type: console
+---
+
+## Overview
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem nisl, dignissim nec tempus eget, aliquam ac eros. Pellentesque molestie ultrices nisl in efficitur. Donec ultricies, ex vulputate dictum molestie, felis ipsum porta neque, iaculis feugiat magna urna ac est. Sed id sem nec purus tristique sollicitudin. Quisque condimentum, lacus vitae tempor ullamcorper, metus neque vulputate lorem, blandit fringilla sapien ipsum a urna. Donec commodo aliquet felis eget sollicitudin. Vestibulum eu dui pellentesque, dignissim odio eget, imperdiet magna. Donec suscipit tristique malesuada. Nullam tincidunt in sem vitae dictum. Sed sodales lorem id ligula consectetur, quis pharetra augue tristique.
+
+## Simulation outputs
+
+Browse animations of [dispersal](simulations-dispersal.qmd) simulation outputs.

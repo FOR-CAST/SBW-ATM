@@ -1,0 +1,20 @@
+```{=html}
+
+<div class="list grid" style="column-gap: 10px;">
+
+<% for (const item of items) { %>
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" <%= metadataAttrs(item) %>>
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="<%- item.path %>" class="listing-title"><%= item.filename %></a>
+      </small>
+    </div>
+    <a href="<%- item.path %>">
+      <img src="<%- item.path %>" alt="<%- item.filename %>" size="30%" class="card-img-top"/>
+    </a>
+  </div>
+<% } %>
+
+</div>
+
+```
