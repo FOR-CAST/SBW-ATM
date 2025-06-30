@@ -51,27 +51,26 @@ if (data_source == "ftp")  {
     }
   )
 } else if (data_source == "gdrive") {
-  drive_folders <- data.frame(
+  drive_files <- data.frame(
     year = 2022L:2025L,
     gid = c(
-      "10GuWDdWQF3kHfBsng1KmOXwJRe4HabpP", ## 2022 dispersal
-      "15spzG5bbpkY9-B007ZsKr4diV7qDunhJ", ## 2023 dispersal
-      "133JchsL6xMWxf_XlmvVspxtXd1UZHOeu", ## 2024 dispersal
-      "1-Pyilgyql4Gg726Mh2yur3b4NqfHctON"  ## 2025 dispersal
+      "10KTAwZYCu8B5MHDbHSlNKwGS_UYJzL88", ## 2022 dispersal
+      "15xLbxqNp9maGb92zvY3vg90VpGq2MCLI", ## 2023 dispersal
+      "13A1qFtKew9i8IpbWAmCi3Yk5P-hEuOmr", ## 2024 dispersal
+      "1CzhM1L4XhaMKuarvEwvMuEoeoLgAuHQ2" ## 2025 dispersal
     )
   )
   
   purrr::walk2(
-    .x = drive_folders$gid,
-    .y = drive_folders$year,
+    .x = drive_files$gid,
+    .y = drive_files$year,
     .f = function(gid, year) {
-      foo <- drive_get(id = as_id(gid)) ## works...
-      
-      ## TODO: Error: Shared drive not found: 0AC0WNQwJG4HCUk9PVA -- app permissions issue?
-      foo$drive_resource[[1]]$isAppAuthorized ## FALSE
-      
-      # gifs <- drive_ls(path = as_id(gid), pattern = "[.]gif$")
-      ## TODO
+      destdir <- file.path("outputs", "dispersal", year) |> fs::dir_create()
+      drive_download(
+        file = as_id(gid),
+        path = file.path(destdir, glue::glue("SBW_flight_{year}.gif")),
+        overwrite = TRUE
+      )
     }
   )
 } else {
