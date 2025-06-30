@@ -27,34 +27,56 @@ Representative animations of simulation outputs are presented here for the lates
 
 **Please refer to the [Contact](contact.qmd) page for data requests.**
 
-```{r, echo = FALSE, eval = FALSE}
-## download the latest animations for each year
-
+```{r animation-files, echo = FALSE, message = FALSE}
 library(googledrive)
 
-drive_folders <- data.frame(
-  year = 2022L:2025L,
-  gid = c(
-    "10GuWDdWQF3kHfBsng1KmOXwJRe4HabpP", ## 2022 dispersal
-    "15spzG5bbpkY9-B007ZsKr4diV7qDunhJ", ## 2023 dispersal
-    "133JchsL6xMWxf_XlmvVspxtXd1UZHOeu", ## 2024 dispersal
-    "1-Pyilgyql4Gg726Mh2yur3b4NqfHctON"  ## 2025 dispersal
-  )
-)
+data_source <- "gdrive" # "ftp"
 
-purrr::walk2(
-  .x = drive_folders$gid,
-  .y = drive_folders$year,
-  .f = function(gid, year) {
-    foo <- drive_get(id = as_id(gid)) ## works...
-    
-    ## TODO: Error: Shared drive not found: 0AC0WNQwJG4HCUk9PVA -- app permissions issue?
-    foo$drive_resource[[1]]$isAppAuthorized ## FALSE
-    
-    # gifs <- drive_ls(path = as_id(gid), pattern = "[.]gif$")
-    ## TODO
-  }
-)
+if (data_source == "ftp")  {
+  ## download the latest animations for each year
+  ftp_url <- "ftp://ftp.cfl.scf.rncan.gc.ca/regniere/Dispersal"
+  
+  ftp_years <- 2021L:2023L ## missing 2024, 2025
+  
+  ftp_files <- lapply(ftp_years, function(year) {
+    file.path(ftp_url, year, glue::glue("SBW_Flight_{year}.gif"))
+  })
+  
+  purrr::walk2(
+    .x = ftp_files,
+    .y = ftp_years,
+    .f = function(file, year) {
+      destdir <- file.path("outputs", "dispersal", year) |> fs::dir_create()
+      download.file(file, destfile = file.path(destdir, basename(file)))
+    }
+  )
+} else if (data_source == "gdrive") {
+  drive_folders <- data.frame(
+    year = 2022L:2025L,
+    gid = c(
+      "10GuWDdWQF3kHfBsng1KmOXwJRe4HabpP", ## 2022 dispersal
+      "15spzG5bbpkY9-B007ZsKr4diV7qDunhJ", ## 2023 dispersal
+      "133JchsL6xMWxf_XlmvVspxtXd1UZHOeu", ## 2024 dispersal
+      "1-Pyilgyql4Gg726Mh2yur3b4NqfHctON"  ## 2025 dispersal
+    )
+  )
+  
+  purrr::walk2(
+    .x = drive_folders$gid,
+    .y = drive_folders$year,
+    .f = function(gid, year) {
+      foo <- drive_get(id = as_id(gid)) ## works...
+      
+      ## TODO: Error: Shared drive not found: 0AC0WNQwJG4HCUk9PVA -- app permissions issue?
+      foo$drive_resource[[1]]$isAppAuthorized ## FALSE
+      
+      # gifs <- drive_ls(path = as_id(gid), pattern = "[.]gif$")
+      ## TODO
+    }
+  )
+} else {
+  stop("'data_source' must be one of 'ftp' or 'gdrive'.")
+}
 ```
 
 ## 2025
