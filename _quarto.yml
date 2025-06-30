@@ -43,7 +43,7 @@ website:
         contents:
         - simulations-dispersal.qmd
   page-footer: |
-    Copyright 2025 Spruce Budworm Atmospheric Transport Model Team.
+    Copyright &copy; 2025 Spruce Budworm Atmospheric Transport Model Team.<br />
     Website developed by [FOR-CAST Research & Analytics](https://for-cast.ca) using [quarto](https://quarto.org).
   repo-url: https://github.com/FOR-CAST/SBW-ATM
   repo-actions: [edit, source, issue]
