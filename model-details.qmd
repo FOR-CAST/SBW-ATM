@@ -9,37 +9,49 @@ editor_options:
 
 ## Methodology
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem nisl, dignissim nec tempus eget, aliquam ac eros. Pellentesque molestie ultrices nisl in efficitur. Donec ultricies, ex vulputate dictum molestie, felis ipsum porta neque, iaculis feugiat magna urna ac est. Sed id sem nec purus tristique sollicitudin. Quisque condimentum, lacus vitae tempor ullamcorper, metus neque vulputate lorem, blandit fringilla sapien ipsum a urna. Donec commodo aliquet felis eget sollicitudin. Vestibulum eu dui pellentesque, dignissim odio eget, imperdiet magna. Donec suscipit tristique malesuada. Nullam tincidunt in sem vitae dictum. Sed sodales lorem id ligula consectetur, quis pharetra augue tristique.
-
-```{mermaid}
-flowchart LR
-  A[Hard edge] --> B(Round edge)
-  B --> C{Decision}
-  C --> D[Result one]
-  C --> E[Result two]
-```
 
 ### Simulation platform
 
 *BioSIM* [@regniere2014biosim10; @regniere2017biosim11]
 
-In mollis elementum fringilla. Cras dictum feugiat elit facilisis dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce tellus justo, tristique vitae neque in, faucibus sollicitudin felis. Proin tempor cursus finibus. Vestibulum volutpat consectetur imperdiet. Duis auctor nec lectus ut interdum. Cras iaculis lacus non nunc lobortis feugiat. Aenean ut nunc leo. Ut eros lectus, vestibulum at leo ac, eleifend luctus dolor. In tincidunt vestibulum sollicitudin. Curabitur vitae convallis risus. Nunc urna massa, vulputate ac ipsum eu, mattis lacinia nisl. Praesent ante lectus, dapibus quis auctor in, convallis sed nisi. Nullam in elementum est, id pulvinar tellus. Cras finibus dapibus risus ac lobortis.
+BioSIM is a software tool designed to assist in the application of temperature-driven simulation models in pest management. It can also be used as a tool in the development and analysis of such models for purposes of scientific investigation. However, BioSIM’s main purpose is to generate forecasts of features or “events” in the seasonal biology of pests or their host plants. Forecasts are made by simulation models provided by the system and are based on regional air temperature and precipitation interpolated from nearby weather stations, adjusted for elevation and location differentials with regional gradients.
 
 - <https://cfs.nrcan.gc.ca/projects/133>
 - <https://github.com/RNCan/WeatherBasedSimulationFramework/wiki>
 
 ### Model fomulation
 
-Phasellus vehicula posuere mauris, quis sollicitudin ante. Proin lobortis placerat neque, eget suscipit enim pretium quis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean blandit semper urna in gravida. Proin et aliquam tellus. Quisque dui libero, efficitur non malesuada sed, ultrices in elit. Nulla ac viverra arcu. Duis varius pharetra mauris, ac vehicula odio porta in.
+Conceptual diagram of the SBW–pyATM framework, including
+modeling procedure and data processing stream (Garcia et al. 2022).
 
-```{r, echo = FALSE}
-## placeholder figure
-scatter.smooth(x = cars$speed, y = cars$dist, main = "dist ~ speed")
+```{mermaid}
+
+flowchart TD
+ A["NARR large-scale weather reanalyses"]
+ B["Topography(dx < 1 km)"]
+ C["Landcover (dx < 1 km)"]
+ D["WRF model T, P, Q, R, U, V, W (dx < 3 km; dt < than 1 hr)"]
+ E["BioSIM SBW adult emergence dates"]
+ F["SBW empirical flight formulas + parameters"]
+ G["SBW-pyATM individual-based flight model (100–1000x)"]
+ H["Defoliation via aerial survey (end of prior summer)"]
+ I["XAM radar observations (dx = 1 km; dt = 10 min)"]
+ J["SBW-pyATM ensemble post-processing (liftoff/landing locations, etc.)"]
+ K["Model evaluation + accuracy metrics"]
+
+ A --> D
+ B --> D
+ C --> D
+ D --> G
+ E --> G
+ F --> G
+ H --> G
+ G --> J
+ I --> J
+ J --> K 
+
 ```
 
-Proin aliquet, ante eget vehicula semper, justo quam semper magna, at sagittis neque elit et mi. Nulla id sem sit amet ipsum egestas egestas. Fusce ac luctus nulla, vel molestie nunc. Morbi luctus mi nulla, vitae sodales massa cursus a. Pellentesque porttitor magna ac enim tempus laoreet. Mauris sagittis sapien vitae sapien cursus consectetur at a felis. Sed non pulvinar felis. Vestibulum vestibulum nibh ac sollicitudin molestie. Nulla faucibus sodales ante non eleifend. Praesent ultricies, diam vestibulum vestibulum mattis, ex massa molestie odio, non tristique magna dui et tellus. Ut eleifend dapibus justo, sit amet porta urna.
-
-Pellentesque gravida nibh nec eros sagittis, tincidunt ultrices nunc venenatis. Pellentesque consectetur ac justo at elementum. Vestibulum a commodo justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in rutrum libero, et dapibus nisi. Pellentesque dignissim finibus elit, ac cursus velit laoreet sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed faucibus lectus ut consectetur ultrices. Donec sit amet facilisis sem. Proin nec sollicitudin eros. Donec nec mollis magna, a ullamcorper tellus. Ut sem libero, porta at scelerisque eu, malesuada eget odio. Proin varius tempus luctus. Donec rhoncus posuere urna.
 
 ## References
 
