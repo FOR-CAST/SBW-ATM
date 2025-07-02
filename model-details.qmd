@@ -14,7 +14,10 @@ editor_options:
 
 *BioSIM* [@regniere2014biosim10; @regniere2017biosim11]
 
-BioSIM is a software tool designed to assist in the application of temperature-driven simulation models in pest management. It can also be used as a tool in the development and analysis of such models for purposes of scientific investigation. However, BioSIM’s main purpose is to generate forecasts of features or “events” in the seasonal biology of pests or their host plants. Forecasts are made by simulation models provided by the system and are based on regional air temperature and precipitation interpolated from nearby weather stations, adjusted for elevation and location differentials with regional gradients.
+BioSIM is a software tool designed to assist in the application of temperature-driven simulation models in pest management.
+It can also be used as a tool in the development and analysis of such models for purposes of scientific investigation.
+However, BioSIM's main purpose is to generate forecasts of features or "events" in the seasonal biology of pests or their host plants. 
+Forecasts are made by simulation models provided by the system and are based on regional air temperature and precipitation interpolated from nearby weather stations, adjusted for elevation and location differentials with regional gradients.
 
 - <https://cfs.nrcan.gc.ca/projects/133>
 - <https://github.com/RNCan/WeatherBasedSimulationFramework/wiki>
@@ -22,7 +25,7 @@ BioSIM is a software tool designed to assist in the application of temperature-d
 ### Model fomulation
 
 Conceptual diagram of the SBW–pyATM framework, including
-modeling procedure and data processing stream (Garcia et al. 2022).
+modeling procedure and data processing stream [@garcia2022].
 
 ```{mermaid}
 
