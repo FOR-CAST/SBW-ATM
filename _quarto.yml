@@ -50,8 +50,8 @@ website:
 
 format:
   html:
+    css: styles.css
     theme:
       - sandstone
       - brand
-    css: styles.css
     toc: true
