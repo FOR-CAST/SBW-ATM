@@ -3,5 +3,11 @@
 .RData
 .Ruserdata
 /.quarto/
+
+# generated website files
+_site/
 docs/
 outputs/
+
+# generated credentials from google-github-actions/auth
+gha-creds-*.json

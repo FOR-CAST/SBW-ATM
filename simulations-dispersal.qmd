@@ -34,6 +34,10 @@ Representative animations of simulation outputs are presented here for the lates
 library(googledrive)
 library(magick)
 
+if (Sys.getenv("CI") == "true") {
+  drive_auth(path = list.files(path = ".", pattern = "gha-creds-*.json"))
+}
+
 drive_files <- data.frame(
   year = 2022L:2025L,
   gid = c(

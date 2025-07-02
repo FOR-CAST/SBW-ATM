@@ -10,7 +10,7 @@ website:
     type: express
     style: headline
   google-analytics:
-    tracking-id: "G-XXXXXXX" ## TODO
+    tracking-id: "G-WC21CZ2FX4"
     anonymize-ip: true
   open-graph: true
   announcement:
