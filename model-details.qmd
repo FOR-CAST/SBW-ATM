@@ -26,19 +26,31 @@ Conceptual diagram of the SBW–pyATM framework, including
 modeling procedure and data processing stream [@garcia2022].
 
 ```{mermaid}
-
 flowchart TD
- A["NARR large-scale weather reanalyses"]
+ A["NARR large-scale
+ weather reanalyses"]
  B["Topography(dx < 1 km)"]
  C["Landcover (dx < 1 km)"]
- D["WRF model T, P, Q, R, U, V, W (dx < 3 km; dt < than 1 hr)"]
- E["BioSIM SBW adult emergence dates"]
- F["SBW empirical flight formulas + parameters"]
- G["SBW-pyATM individual-based flight model (100–1000x)"]
- H["Defoliation via aerial survey (end of prior summer)"]
- I["XAM radar observations (dx = 1 km; dt = 10 min)"]
- J["SBW-pyATM ensemble post-processing (liftoff/landing locations, etc.)"]
- K["Model evaluation + accuracy metrics"]
+ D["WRF model T, P, Q, R, U, V, W
+ (dx < 3 km; dt < 1 hr)"]
+ E["BioSIM SBW adult
+ emergence dates"]
+ F["SBW empirical flight
+ formulas + parameters"]
+ G["SBW-pyATM
+ individual-based
+ flight model
+ (100-1000x)"]
+ H["Defoliation via aerial survey
+ (end of prior summer)"]
+ I["XAM radar observations
+ (dx = 1 km; dt = 10 min)"]
+ J["SBW-pyATM ensemble
+ post-processing
+ (liftoff/landing locations,
+ etc.)"]
+ K["Model evaluation +
+ accuracy metrics"]
 
  A --> D
  B --> D
@@ -50,7 +62,6 @@ flowchart TD
  G --> J
  I --> J
  J --> K 
-
 ```
 
 
