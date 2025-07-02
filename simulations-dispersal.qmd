@@ -29,6 +29,7 @@ Representative animations of simulation outputs are presented here for the lates
 
 ```{r animation-files, echo = FALSE, message = FALSE}
 library(googledrive)
+library(magick)
 
 drive_files <- data.frame(
   year = 2022L:2025L,
@@ -39,6 +40,7 @@ drive_files <- data.frame(
     "1CzhM1L4XhaMKuarvEwvMuEoeoLgAuHQ2"  ## 2025 dispersal
   )
 )
+this_year <- max(drive_files$year)
 
 purrr::walk2(
   .x = drive_files$gid,
@@ -46,7 +48,36 @@ purrr::walk2(
   .f = function(gid, year) {
     destdir <- file.path("outputs", "dispersal", year) |> fs::dir_create()
     destfile <- file.path(destdir, glue::glue("SBW_Flight_{year}.gif"))
-    drive_download(file = as_id(gid), path = destfile, overwrite = TRUE)
+    destfile_tmp <- file.path(tempdir(), basename(destfile))
+     
+    if (!file.exists(destfile) || year == this_year) {
+      ## re-download current year to get daily updates
+      drive_download(file = as_id(gid), path = destfile, overwrite = TRUE)
+    
+      ## 1. add USFS branding to animation files prior to 2025;
+      ## 2. slow down animations;
+      logo_width <- 125 ## new logo width, in pixels
+      logo <- image_read("images/usfs.png") |> image_scale(as.character(logo_width))
+      logo_height <- image_info(logo)$height
+      gif <- image_read(destfile)
+      fps <- 1 ## frame per second (animation speed); adjust as needed
+      
+      if (year < 2025) {
+        frames <- image_apply(gif, function(frame) {
+          frame_info <- image_info(frame)
+          offset <- glue::glue("+{frame_info$width - (logo_width + 25)}+{frame_info$height - (logo_height + 75)}")
+          image_composite(frame, logo, offset = offset)
+        })
+        image_write_gif(frames, path = destfile_tmp, delay = 1 / fps)
+      } else {
+        image_write_gif(gif, path = destfile_tmp, delay = 1 / fps)
+      }
+      
+      file.copy(from = destfile_tmp, to = destfile, overwrite = TRUE)
+      
+      ## cleanup
+      gc()
+    }
   }
 )
 ```
