@@ -1,17 +1,19 @@
 ---
 title: "History"
+bibliography: references.bib
 editor_options: 
   chunk_output_type: console
 ---
 
 Initially designed as an experimental tool in 2010, the spruce budworm ATM has been operationalized as a near real-time forecasting and backcasting tool.
 
-The spruce budworm ATM was initiated by the United States Forest Service Research Branch in 2003 by Gary Achtemeier, after consultations with Brian Sturtevant. The early ATM was grounded in Gary's foundational work on particle dispersal through the 1970s-2000s:
-
-Scott, R.W. and Achtemeier, G.L., 1987. Estimating pathways of migrating insects carried in atmospheric winds. Environmental Entomology, 16(6), pp.1244-1254.
-
-Achtemeier, Gary L. 1998. A framework for standardizing flight characteristics for separating biology from meteorology in long-range insect transport. The 23rd conf. on Agricultural & Forest Meteorology, 13th conf. on Biometeorology and Aerobiology, and 2nd Urban Environment Symp. 360-363.
-
-Achtemeier, Gary L. 2002. Interface modeling for predicting atmospheric transport of biota. In: 15th Conference on Biometeorology and Aerobiology Joint with the 16th International Congress on Biometeorology, October 28-November 1, Kansas City, Missouri, p. 204-208
+The spruce budworm ATM was initiated by the United States Forest Service Research Branch in 2003 by Gary Achtemeier, after consultations with Brian Sturtevant. The early ATM was grounded in Gary's foundational work on particle dispersal through the 1970s-2000s [@scott1987; @achtemeier1998; @achtemeier2002].
 
 Following a materials transfer in 2013, the Canadian Forest Service (CFS) and University of Wisconsin (UW) assumed lead roles in model development, with CFS implementing an operationalized version of the model in BioSIM, and UW implementing a research and develepment version in Python. The operational version simulates thousands of flight tracks and is useful as a strategic policy  and planning tool. The experimental version simulates millions of flight tracks and is designed as a tactical pest management planning tool. Both are "operational" from an informatic perspectives.
+
+## References
+
+<!-- bibliography is automatically generated; do not edit by hand -->
+
+::: {#refs}
+:::
