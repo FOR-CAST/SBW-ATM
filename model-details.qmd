@@ -12,7 +12,7 @@ editor_options:
 
 ### Simulation platform
 
-BioSIM [@regniere2014biosim10; @regniere2017biosim11] is a software tool designed to assist in the application of temperature-driven simulation models in pest management.
+BioSIM [@regniere2014biosim10; @regniere2017biosim11] is a software tool designed to assist in the application of temperature-driven simulation models in pest management. 
 It can also be used as a tool in the development and analysis of such models for purposes of scientific investigation.
 However, BioSIM's main purpose is to generate forecasts of features or "events" in the seasonal biology of pests or their host plants. 
 Forecasts are made by simulation models provided by the system and are based on regional air temperature and precipitation interpolated from nearby weather stations, adjusted for elevation and location differentials with regional gradients.
