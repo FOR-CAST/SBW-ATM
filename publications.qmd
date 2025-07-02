@@ -7,7 +7,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem nisl, dignissim nec tempus eget, aliquam ac eros. Pellentesque molestie ultrices nisl in efficitur. Donec ultricies, ex vulputate dictum molestie, felis ipsum porta neque, iaculis feugiat magna urna ac est.
+The following publications describe the evolution of the Spruce Budworm ATM model structure, including formal validations over the period 2013-2025.
 
 <!-- bibliography is automatically generated; do not edit by hand -->
 

@@ -4,11 +4,11 @@ editor_options:
   chunk_output_type: console
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lorem nisl, dignissim nec tempus eget, aliquam ac eros. Pellentesque molestie ultrices nisl in efficitur. Donec ultricies, ex vulputate dictum molestie, felis ipsum porta neque, iaculis feugiat magna urna ac est. Sed id sem nec purus tristique sollicitudin. Quisque condimentum, lacus vitae tempor ullamcorper, metus neque vulputate lorem, blandit fringilla sapien ipsum a urna. Donec commodo aliquet felis eget sollicitudin. Vestibulum eu dui pellentesque, dignissim odio eget, imperdiet magna. Donec suscipit tristique malesuada. Nullam tincidunt in sem vitae dictum. Sed sodales lorem id ligula consectetur, quis pharetra augue tristique.
+For further information about the Spruce Budworm Atmospheric Transport Model:
 
 |                           |                                                                  |
 |---------------------------|------------------------------------------------------------------|
-| **Canada Modelling Lead** | Jacques Régnière (Canadian Forest Service) [{{< fa envelope >}}](mailto:jacques.regniere@nrcan-rncan.gc.ca) |
+| **Canada Modelling Lead** | Barry J. Cooke (Canadian Forest Service) [{{< fa envelope >}}](mailto:barry.cooke@nrcan-rncan.gc.ca) |
 | **US Modelling Lead**     | Brian R. Sturtevant (USDA Forest Service) [{{< fa envelope >}}](mailto:brian.r.sturtevant@usda.gov) |
 | **Data requests**         | Rémi Saint-Amant (Canadian Forest Service) [{{< fa envelope >}}](mailto:remi.saint-amant@nrcan-rncan.gc.ca) |
 | **Other requests**        | Other [Modelling Team](about.qmd#modelling-team) members |
