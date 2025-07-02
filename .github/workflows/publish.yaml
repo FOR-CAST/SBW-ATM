@@ -25,7 +25,6 @@ jobs:
       - name: Setup renv
         uses: r-lib/actions/setup-renv@v2
 
-      steps:
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v0.4.0
         with:
