@@ -29,53 +29,57 @@ Representative animations of simulation outputs are presented here for the lates
 
 ```{r animation-files, echo = FALSE, message = FALSE}
 library(googledrive)
+library(magick)
 
-data_source <- "gdrive" # "ftp"
+drive_files <- data.frame(
+  year = 2022L:2025L,
+  gid = c(
+    "10KTAwZYCu8B5MHDbHSlNKwGS_UYJzL88", ## 2022 dispersal
+    "15xLbxqNp9maGb92zvY3vg90VpGq2MCLI", ## 2023 dispersal
+    "13A1qFtKew9i8IpbWAmCi3Yk5P-hEuOmr", ## 2024 dispersal
+    "1CzhM1L4XhaMKuarvEwvMuEoeoLgAuHQ2"  ## 2025 dispersal
+  )
+)
+this_year <- max(drive_files$year)
 
-if (data_source == "ftp")  {
-  ## download the latest animations for each year
-  ftp_url <- "ftp://ftp.cfl.scf.rncan.gc.ca/regniere/Dispersal"
-  
-  ftp_years <- 2021L:2023L ## missing 2024, 2025
-  
-  ftp_files <- lapply(ftp_years, function(year) {
-    file.path(ftp_url, year, glue::glue("SBW_Flight_{year}.gif"))
-  })
-  
-  purrr::walk2(
-    .x = ftp_files,
-    .y = ftp_years,
-    .f = function(file, year) {
-      destdir <- file.path("outputs", "dispersal", year) |> fs::dir_create()
-      download.file(file, destfile = file.path(destdir, basename(file)))
+purrr::walk2(
+  .x = drive_files$gid,
+  .y = drive_files$year,
+  .f = function(gid, year) {
+    destdir <- file.path("outputs", "dispersal", year) |> fs::dir_create()
+    destfile <- file.path(destdir, glue::glue("SBW_Flight_{year}.gif"))
+    destfile_tmp <- file.path(tempdir(), basename(destfile))
+     
+    if (!file.exists(destfile) || year == this_year) {
+      ## re-download current year to get daily updates
+      drive_download(file = as_id(gid), path = destfile, overwrite = TRUE)
+    
+      ## 1. add USFS branding to animation files prior to 2025;
+      ## 2. slow down animations;
+      logo_width <- 125 ## new logo width, in pixels
+      logo <- image_read("images/usfs.png") |> image_scale(as.character(logo_width))
+      logo_height <- image_info(logo)$height
+      gif <- image_read(destfile)
+      fps <- 1 ## frame per second (animation speed); adjust as needed
+      
+      if (year < 2025) {
+        frames <- image_apply(gif, function(frame) {
+          frame_info <- image_info(frame)
+          offset <- glue::glue("+{frame_info$width - (logo_width + 25)}+{frame_info$height - (logo_height + 75)}")
+          image_composite(frame, logo, offset = offset)
+        })
+        image_write_gif(frames, path = destfile_tmp, delay = 1 / fps)
+      } else {
+        image_write_gif(gif, path = destfile_tmp, delay = 1 / fps)
+      }
+      
+      file.copy(from = destfile_tmp, to = destfile, overwrite = TRUE)
+      
+      ## cleanup
+      gc()
     }
-  )
-} else if (data_source == "gdrive") {
-  drive_files <- data.frame(
-    year = 2022L:2025L,
-    gid = c(
-      "10KTAwZYCu8B5MHDbHSlNKwGS_UYJzL88", ## 2022 dispersal
-      "15xLbxqNp9maGb92zvY3vg90VpGq2MCLI", ## 2023 dispersal
-      "13A1qFtKew9i8IpbWAmCi3Yk5P-hEuOmr", ## 2024 dispersal
-      "1CzhM1L4XhaMKuarvEwvMuEoeoLgAuHQ2" ## 2025 dispersal
-    )
-  )
-  
-  purrr::walk2(
-    .x = drive_files$gid,
-    .y = drive_files$year,
-    .f = function(gid, year) {
-      destdir <- file.path("outputs", "dispersal", year) |> fs::dir_create()
-      drive_download(
-        file = as_id(gid),
-        path = file.path(destdir, glue::glue("SBW_flight_{year}.gif")),
-        overwrite = TRUE
-      )
-    }
-  )
-} else {
-  stop("'data_source' must be one of 'ftp' or 'gdrive'.")
-}
+  }
+)
 ```
 
 ## 2025
