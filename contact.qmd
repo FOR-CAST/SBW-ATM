@@ -12,3 +12,6 @@ For further information about the Spruce Budworm Atmospheric Transport Model:
 | **US Modelling Lead**     | Brian R. Sturtevant (USDA Forest Service) [{{< fa envelope >}}](mailto:brian.r.sturtevant@usda.gov) |
 | **Data requests**         | Rémi Saint-Amant (Canadian Forest Service) [{{< fa envelope >}}](mailto:remi.saint-amant@nrcan-rncan.gc.ca) |
 | **Other requests**        | Other [Modelling Team](about.qmd#modelling-team) members |
+
+[![](images/nrcan-cfs.png){width="200"}](https://natural-resources.canada.ca/corporate/corporate-overview/canadian-forest-service)
+[![](images/usfs.png){width="200"}](https://research.fs.usda.gov/)

@@ -8,8 +8,15 @@ editor_options:
 
 Initially designed as an experimental tool, the spruce budworm ATM has been operationalized as a near real-time forecasting and backcasting tool.
 
-
-
+```{mermaid}
+flowchart TD
+ A["SBW-ATM (USFS)"]
+ B["BioSIM SBW-ATM (CFS)"]
+ C["SBW-pyATM (UW)"]
+ 
+ A --> B
+ A --> C
+```
 
 ## Model History
 
@@ -18,3 +25,6 @@ For a historical account of the model's development, see [Model History](model-h
 ## Model Details
 
 Further model description is provided in [Model Details](model-details.qmd).
+
+[![](images/nrcan-cfs.png){width="200"}](https://natural-resources.canada.ca/corporate/corporate-overview/canadian-forest-service)
+[![](images/usfs.png){width="200"}](https://research.fs.usda.gov/)

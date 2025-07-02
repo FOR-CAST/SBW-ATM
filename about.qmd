@@ -23,11 +23,6 @@ This research was made possible through partnerships between the **Canadian Fore
 
 ### Core members
 
--   Barry J. Cooke (Canadian Forest Service)
-[{{< fa envelope >}}](mailto:barry.cooke@nrcan-rncan.gc.ca)
-[{{< fa globe >}}](https://cfs.nrcan.gc.ca/employees/read/bcooke)
-[{{< fa brands google-scholar >}}](https://scholar.google.com/citations?user=M07Zbt4AAAAJ&hl=en)
-
 -   Brian R. Sturtevant (USDA Forest Service)
 [{{< fa envelope >}}](mailto:brian.r.sturtevant@usda.gov)
 [{{< fa brands google-scholar >}}](https://scholar.google.ca/citations?user=gEmEYccAAAAJ&hl=en)
@@ -40,6 +35,11 @@ This research was made possible through partnerships between the **Canadian Fore
 -   Rémi Saint-Amant (Canadian Forest Service)
 [{{< fa envelope >}}](mailto:remi.saint-amant@nrcan-rncan.gc.ca)
 [{{< fa globe >}}](https://cfs.nrcan.gc.ca/employees/read/rstamant)
+
+-   Barry J. Cooke (Canadian Forest Service)
+[{{< fa envelope >}}](mailto:barry.cooke@nrcan-rncan.gc.ca)
+[{{< fa globe >}}](https://cfs.nrcan.gc.ca/employees/read/bcooke)
+[{{< fa brands google-scholar >}}](https://scholar.google.com/citations?user=M07Zbt4AAAAJ&hl=en)
 
 -   Jacques Régnière (Canadian Forest Service)
 [{{< fa envelope >}}](mailto:jacques.regniere@nrcan-rncan.gc.ca)
@@ -58,7 +58,7 @@ This research was made possible through partnerships between the **Canadian Fore
 
 ### Contributors
 
-- Gary Achtmeier
+- Gary Achtemeier
 - Jay Charney
 - Dean Anderson
 - Johanne Delisle
