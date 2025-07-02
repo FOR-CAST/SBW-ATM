@@ -42,6 +42,7 @@ website:
         href: simulations.qmd
         contents:
         - simulations-dispersal.qmd
+    logo: images/sidebar-logo.png
   page-footer: |
     Copyright &copy; 2025 Spruce Budworm Atmospheric Transport Model Team.<br />
     Website developed by [FOR-CAST Research & Analytics](https://for-cast.ca) using [quarto](https://quarto.org).
