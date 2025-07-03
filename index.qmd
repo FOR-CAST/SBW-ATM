@@ -7,13 +7,14 @@ editor_options:
 ## Overview
 
 Eastern North America is in the midst of a rising epidemic of spruce budworm (SBW).
-The SBW transport model (ATM) is an individual-based (or agent-based) modeling framework designed to simulate and understand the long-distance dispersal of adult SBW moths.
+The SBW transport model (ATM) is an individual-based (or agent-based) modelling framework designed to simulate and understand the long-distance dispersal of adult SBW moths.
 Hourly simulations of insect phenology, moth emergence, takeoff, flight, and landing allow us to report on daily flight trajectories taken by individual moths.
 
 <!-- NOTE: use latest map here -->
-![](outputs/dispersal/2025/SBW_Flight_2025.gif)
+![Animation showing the latest recent spruce budworm dispersal simulation outputs. Results for previous dispersal years are [also available](simulations-dispersal.qmd).](outputs/dispersal/2025/SBW_Flight_2025.gif)
+
 Historically, large numbers of SBW moths have been observed to disperse over vast areas, covering distances up to 600 km (373 miles) from their origin.
 Moths tend to move large distances in concentrated streams - "atmospheric rivers" - because of atmospheric transport.
-Such mass exodus flights, often involving billions of moths, typically occur in favorable weather conditions, starting around sunset and continuing for several hours with wind-driven transport.
+Such mass exodus flights, often involving billions of moths, typically occur in favourable weather conditions, starting around sunset and continuing for several hours with wind-driven transport.
 A significant proportion of these dispersing moths are egg-carrying females, which are able to lay the foundation for an expanding outbreak.
 This model is crucial for forecasting future larval defoliation in new areas, where moth immigration can enable populations to overcome local limitations and initiate or expand outbreaks, thereby supporting forest management decisions.

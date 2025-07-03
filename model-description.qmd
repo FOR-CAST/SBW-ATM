@@ -6,7 +6,9 @@ editor_options:
 
 ## Summary
 
-Initially designed as an experimental tool, the spruce budworm ATM has been operationalized as a near real-time forecasting (nowcasting) and backcasting tool. The model has been validated in numerous years, including 2007, 2013, and 2017. Nowcasts are updated daily. Historical backcasts are available for years 2022 onward.
+Initially designed as an experimental tool, the spruce budworm ATM has been operationalized as a near real-time forecasting (nowcasting) and backcasting tool.
+The model has been validated in numerous years, including 2007, 2013, and 2017.
+Nowcasts are updated daily. Historical backcasts are available for years 2022 onward.
 
 ```{mermaid}
 flowchart TD
