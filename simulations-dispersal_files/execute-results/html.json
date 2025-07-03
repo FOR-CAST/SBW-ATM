@@ -1,0 +1,15 @@
+{
+  "hash": "9739e545e068d9fdbca8492d58da7997",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Dispersal\"\nlisting:\n  - id: \"dispersal-2022\"\n    contents: outputs/dispersal/2022/*.gif\n    page-size: 3\n    template: gallery.ejs\n  - id: \"dispersal-2023\"\n    contents: outputs/dispersal/2023/*.gif\n    page-size: 3\n    template: gallery.ejs\n  - id: \"dispersal-2024\"\n    contents: outputs/dispersal/2024/*.gif\n    page-size: 3\n    template: gallery.ejs\n  - id: \"dispersal-2025\"\n    contents: outputs/dispersal/2025/*.gif\n    page-size: 3\n    template: gallery.ejs\neditor_options: \n  chunk_output_type: console\n---\n\n\n\n\nThe spruce budworm (SBW) atmospheric transport model is an individual-based (or agent-based) modeling framework designed to simulate and understand the long-distance dispersal of adult SBW moths (Choristoneura fumiferana).\nThis model is crucial for forecasting future larval defoliation in new areas, where moth immigration can enable populations to overcome local limitations and initiate or expand outbreaks, thereby supporting forest management decisions.\nHistorically, large numbers of SBW moths have been observed to disperse over vast areas, covering distances up to 600 km (373 miles) from their origin.\nSuch mass exodus flights, often involving billions of moths, typically occur in favorable weather conditions, starting around sunset and continuing for several hours with wind-driven transport. A significant proportion of these dispersing moths are egg-carrying females.\n\nRepresentative animations of simulation outputs are presented here for the latest dispersal years.\n\n**Please refer to the [Contact](contact.qmd) page for data requests.**\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n## 2025\n\n::: {#dispersal-2025}\n:::\n\n## 2024\n\n::: {#dispersal-2024}\n:::\n\n## 2023\n\n::: {#dispersal-2023}\n:::\n\n## 2022\n\n::: {#dispersal-2022}\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
