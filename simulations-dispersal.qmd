@@ -36,7 +36,9 @@ library(googledrive)
 library(magick)
 
 if (Sys.getenv("CI") == "true") {
-  drive_auth(path = fs::dir_ls(path = ".", glob = "gha-creds-*.json", type = "file"))
+  ## TODO: fix error: ! `path` does not represent a service account.
+  # drive_auth(path = fs::dir_ls(path = ".", glob = "gha-creds-*.json", type = "file"))
+  drive_auth(path = Sys.getenv("GOOGLE_AUTH")) ## TODO: don't use env var
 } else {
   if (file.exists()) {
     drive_auth(path = fs::dir_ls(path = ".", glob = "sbw-atm-website-*.json", type = "file"))
