@@ -1,0 +1,7 @@
+/* css styles */
+.sidebar-logo {
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* For horizontal centering */
+    transform: translateX(-50%); /* For horizontal centering */
+}
