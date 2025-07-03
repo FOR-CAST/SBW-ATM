@@ -12,3 +12,5 @@ outputs/
 # google credentials
 gha-creds-*.json
 sbw-atm-website-*.json
+
+simulations-dispersal_files/execute-results/
