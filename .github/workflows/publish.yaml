@@ -48,7 +48,7 @@ jobs:
         with:
           path: |
             outputs
-          key: ${{ runner.os }}-${{steps.setup-r.outputs.installed-r-version}}-outputs
+          key: ${{ runner.os }}-${{ steps.setup-r.outputs.installed-r-version }}-outputs
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
