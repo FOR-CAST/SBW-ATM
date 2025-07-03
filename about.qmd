@@ -16,10 +16,14 @@ The Spruce Budworm ATM is one of many Border Lakes project outputs.
 
 This research was made possible through partnerships between the **Canadian Forest Service** and the **US Department of Agriculture Forest Service Research & Development**, fostered by the **Canada-US Forest Health Initiative "One Continent; One Forest; One Threat"** and the **Sustainable Forestry Initiative**, and supported financially by the **US Endowment for Forestry and Communities**.
 
+:::{.logo-container}
 [![](images/nrcan-cfs.png){width="200"}](https://natural-resources.canada.ca/corporate/corporate-overview/canadian-forest-service)
 [![](images/usfs.png){width="200"}](https://research.fs.usda.gov/)
+[![](images/uw-mad.png){width="200"}](https://www.wisc.edu/)
+
 [![](images/SFI_00001_new.svg){width="200"}](https://forests.org/)
 [![](images/use_logo-01.png){width="300"}](https://www.usendowment.org/)
+:::
 
 ## Modelling team
 

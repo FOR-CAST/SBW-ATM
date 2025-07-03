@@ -1,7 +1,17 @@
 /* css styles */
+.logo-container {
+  text-align: center;
+}
+
+.logo-container img {
+  padding-left: 15px;
+  padding-right: 15px;
+  vertical-align: middle;
+}
+
 .sidebar-logo {
-    position: absolute;
-    bottom: 0;
-    left: 50%; /* For horizontal centering */
-    transform: translateX(-50%); /* For horizontal centering */
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* For horizontal centering */
+  transform: translateX(-50%); /* For horizontal centering */
 }

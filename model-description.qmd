@@ -28,5 +28,15 @@ For a historical account of the model's development, see [Model History](model-h
 
 Further model description is provided in [Model Details](model-details.qmd).
 
+## Supporting Partners
+
+See [Program and Partnerships](about.qmd#program-and-partnerships).
+
+:::{.logo-container}
 [![](images/nrcan-cfs.png){width="200"}](https://natural-resources.canada.ca/corporate/corporate-overview/canadian-forest-service)
 [![](images/usfs.png){width="200"}](https://research.fs.usda.gov/)
+[![](images/uw-mad.png){width="200"}](https://www.wisc.edu/)
+
+[![](images/SFI_00001_new.svg){width="200"}](https://forests.org/)
+[![](images/use_logo-01.png){width="300"}](https://www.usendowment.org/)
+:::
