@@ -29,6 +29,7 @@ jobs:
           sudo sed -i 's/\(<policy[^>]*name="disk"[^>]*value="\)[^"]*/\15GiB/' /etc/ImageMagick-6/policy.xml
 
       - name: Install R dependencies
+        id: setup-r
         uses: r-lib/actions/setup-r@v2
         with:
           r-version: '4.4.3'
@@ -41,6 +42,14 @@ jobs:
         with:
           credentials_json: '${{ secrets.GOOGLE_AUTH }}'
 
+      - name: Restore cached outputs
+        id: cache-outputs-restore
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            outputs
+          key: ${{ runner.os }}-${{steps.setup-r.outputs.installed-r-version}}-outputs
+
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
@@ -48,3 +57,11 @@ jobs:
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           GOOGLE_AUTH: '${{ secrets.GOOGLE_AUTH }}'
+
+      - name: Save outputs to cache
+        id: cache-outputs-save
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            outputs
+          key: ${{ steps.cache-outputs-restore.outputs.cache-primary-key }}
