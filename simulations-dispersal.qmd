@@ -36,7 +36,7 @@ library(googledrive)
 library(magick)
 
 if (Sys.getenv("CI") == "true") {
-  creds_file <- fs::dir_ls(path = ".", glob = "gha-creds-*[.]json", type = "file")
+  creds_file <- fs::dir_ls(path = ".", glob = "gha-creds-*.json", type = "file")
   drive_auth(path = creds_file)
 } else {
   if (file.exists()) {
