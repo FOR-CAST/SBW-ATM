@@ -36,9 +36,13 @@ library(googledrive)
 library(magick)
 
 if (Sys.getenv("CI") == "true") {
-  ## gargle/googledrive doesn't support Workload Identity Federation on GHA (only AWS)
-  # drive_auth(path = list.files(path = ".", pattern = "gha-creds-*.json"))
-  drive_auth(path = Sys.getenv("GOOGLE_AUTH"))
+  creds_file <- fs::dir_ls(path = ".", glob = "gha-creds-*[.]json", type = "file")
+  drive_auth(path = creds_file)
+} else {
+  if (file.exists()) {
+    creds_file <- fs::dir_ls(path = ".", glob = "sbw-atm-website-*.json", type = "file")
+    drive_auth(path = creds_file)
+  }
 }
 
 drive_files <- data.frame(
