@@ -40,8 +40,9 @@ if (Sys.getenv("CI") == "true") {
   # drive_auth(path = fs::dir_ls(path = ".", glob = "gha-creds-*.json", type = "file"))
   drive_auth(path = Sys.getenv("GOOGLE_AUTH")) ## TODO: don't use env var
 } else {
-  if (file.exists()) {
-    drive_auth(path = fs::dir_ls(path = ".", glob = "sbw-atm-website-*.json", type = "file"))
+  creds_file <- fs::dir_ls(path = ".", glob = "sbw-atm-website-*.json", type = "file")
+  if (file.exists(creds_file)) {
+    drive_auth(path = creds_file)
   }
 }
 
