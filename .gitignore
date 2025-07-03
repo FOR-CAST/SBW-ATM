@@ -4,6 +4,9 @@
 .Ruserdata
 /.quarto/
 
+# intermediate rendering files
+*_files/execute-results/
+
 # generated website files
 _site/
 docs/
@@ -12,5 +15,3 @@ outputs/
 # google credentials
 gha-creds-*.json
 sbw-atm-website-*.json
-
-simulations-dispersal_files/execute-results/
