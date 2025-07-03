@@ -7,7 +7,7 @@ editor_options:
 
 Initially designed as an experimental tool in 2010, the spruce budworm ATM has been operationalized as a near real-time forecasting and backcasting tool.
 The spruce budworm ATM was initiated by the United States Forest Service Research Branch in 2003 by Brian Sturtevant after consultations with Gary Achtemeier.
-The early ATM was grounded in Gary's foundational work on particle dispersal through the 1970s-2000s [@scott1987; @achtemeier1998; @achtemeier2002].
+The early ATM [@sturtevant2013] was grounded in Gary's foundational work on particle dispersal through the 1970s-2000s [@scott1987; @achtemeier1998; @achtemeier2002].
 Following a materials transfer in 2014, the Canadian Forest Service (CFS) and University of Wisconsin (UW) assumed leading roles in model development, with CFS implementing an operationalized version of the model in BioSIM, and UW implementing a research and development version in Python.
 The operational version simulates thousands of flight tracks and is useful as a strategic policy and planning tool.
 The experimental version simulates millions of flight tracks and is designed as a tactical pest management planning tool.
