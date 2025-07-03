@@ -18,9 +18,13 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install additional system dependencies
+      - name: Install and configure image magick
+        ## increase the resource limits for the image pixel cache
         run: |
-          sudo apt-get update -y && sudo apt-get install -y libmagick++-dev
+          sudo apt-get update -y && sudo apt-get install -y libmagick++-dev imagemagick
+          sudo sed -i 's/\(<policy[^>]*name="memory"[^>]*value="\)[^"]*/\12GiB/' /etc/ImageMagick-6/policy.xml
+          sudo sed -i 's/\(<policy[^>]*name="map"[^>]*value="\)[^"]*/\14GiB/' /etc/ImageMagick-6/policy.xml
+          sudo sed -i 's/\(<policy[^>]*name="disk"[^>]*value="\)[^"]*/\15GiB/' /etc/ImageMagick-6/policy.xml
 
       - name: Install R dependencies
         uses: r-lib/actions/setup-r@v2
