@@ -29,6 +29,7 @@ website:
       - href: model-description.qmd
         text: "Model"
       - publications.qmd
+      - resources.qmd
       - contact.qmd
   sidebar:
     style: "docked"

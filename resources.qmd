@@ -1,0 +1,23 @@
+---
+title: "Resources"
+editor_options: 
+  chunk_output_type: console
+---
+
+## Additional Resources
+
+- Natural Resources Canada: <https://natural-resources.canada.ca/forest-forestry/insects-disturbances/spruce-budworm>
+
+- Québec Agriculture, environnement et ressources naturelles: <https://www.quebec.ca/agriculture-environnement-et-ressources-naturelles/forets/protection-forets/insectes-maladies/programme-lutte-epidemie-tordeuse-bourgeons-epinette>
+
+- New Brunswick Healthy Forest Partnership: <https://healthyforestpartnership.ca/>
+
+- Newfoundland and Labrador: <https://www.gov.nl.ca/ffa/programs-and-funding/forestry-programs-and-funding/idc/>
+
+- Ontario Ministry of Natural Resources: <https://www.ontario.ca/page/spruce-budworm>
+
+- Minnesota DNR: <https://www.dnr.state.mn.us/treecare/forest_health/spruce-budworm/index.html>
+
+- Maine SBW Task Force: <https://www.sprucebudwormmaine.org/>
+
+- Forest Pests of North America: <https://www.forestpests.org/vd/114.html>
