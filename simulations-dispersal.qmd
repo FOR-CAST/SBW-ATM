@@ -21,10 +21,11 @@ editor_options:
   chunk_output_type: console
 ---
 
-The spruce budworm (SBW) atmospheric transport model is an individual-based (or agent-based) modeling framework designed to simulate and understand the long-distance dispersal of adult SBW moths (Choristoneura fumiferana).
+The spruce budworm (SBW) atmospheric transport model is an individual-based (or agent-based) modelling framework designed to simulate and understand the long-distance dispersal of adult SBW moths (_Choristoneura fumiferana_).
 This model is crucial for forecasting future larval defoliation in new areas, where moth immigration can enable populations to overcome local limitations and initiate or expand outbreaks, thereby supporting forest management decisions.
 Historically, large numbers of SBW moths have been observed to disperse over vast areas, covering distances up to 600 km (373 miles) from their origin.
-Such mass exodus flights, often involving billions of moths, typically occur in favorable weather conditions, starting around sunset and continuing for several hours with wind-driven transport. A significant proportion of these dispersing moths are egg-carrying females.
+Such mass exodus flights, often involving billions of moths, typically occur in favourable weather conditions, starting around sunset and continuing for several hours with wind-driven transport. 
+A significant proportion of these dispersing moths are egg-carrying females.
 
 Representative animations of simulation outputs are presented here for the latest dispersal years.
 
@@ -35,7 +36,13 @@ library(googledrive)
 library(magick)
 
 if (Sys.getenv("CI") == "true") {
-  drive_auth(path = list.files(path = ".", pattern = "gha-creds-*.json"))
+  ## TODO: fix error: ! `path` does not represent a service account.
+  # drive_auth(path = fs::dir_ls(path = ".", glob = "gha-creds-*.json", type = "file"))
+  drive_auth(path = Sys.getenv("GOOGLE_AUTH")) ## TODO: don't use env var
+} else {
+  if (file.exists()) {
+    drive_auth(path = fs::dir_ls(path = ".", glob = "sbw-atm-website-*.json", type = "file"))
+  }
 }
 
 drive_files <- data.frame(

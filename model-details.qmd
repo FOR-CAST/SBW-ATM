@@ -22,8 +22,8 @@ Forecasts are made by simulation models provided by the system and are based on 
 
 ### Model fomulation
 
-Conceptual diagram of the SBW–pyATM framework, including
-modeling procedure and data processing stream [@garcia2022].
+Conceptual diagram of the `SBW–pyATM` framework, including
+modelling procedure and data processing stream [@garcia2022].
 
 ```{mermaid}
 flowchart TD

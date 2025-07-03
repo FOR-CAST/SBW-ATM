@@ -82,9 +82,15 @@ After making any updates, render the website locally to preview your
 updates. If all looks good, commit your changes to the source files, and
 push to GitHub.
 
-> [!NOTE]
+> [!WARNING]
 >
 > Do not commit any of the rendered website files in `docs/` (they are
 > already `.gitignore`d). These files will be automatically built and
 > the website rendered using [GitHub
 > Actions](https://github.com/features/actions).
+
+> [!TIP]
+>
+> To avoid rebuilding the site after making minor changes, use
+> [`[skip ci]`](https://docs.github.com/en/actions/how-tos/managing-workflow-runs-and-deployments/managing-workflow-runs/skipping-workflow-runs)
+> in the commit message.

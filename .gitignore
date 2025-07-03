@@ -9,5 +9,6 @@ _site/
 docs/
 outputs/
 
-# generated credentials from google-github-actions/auth
+# google credentials
 gha-creds-*.json
+sbw-atm-website-*.json
