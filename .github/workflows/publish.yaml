@@ -35,6 +35,7 @@ jobs:
         with:
           token_format: 'id_token'
           id_token_audience: 'sbw-atm-website'
+          id_token_include_email: 'true'
           workload_identity_provider: 'projects/919316026151/locations/global/workloadIdentityPools/github-actions/providers/github-actions'
           service_account: 'github-actions@sbw-atm-website.iam.gserviceaccount.com'
 
