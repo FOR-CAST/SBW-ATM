@@ -31,13 +31,9 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
 
       - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v0.4.0
+        uses: google-github-actions/auth@v2.1.10
         with:
-          token_format: 'id_token'
-          id_token_audience: 'sbw-atm.insectforecasts.org/'
-          id_token_include_email: 'true'
-          workload_identity_provider: 'projects/919316026151/locations/global/workloadIdentityPools/github-actions/providers/github-actions'
-          service_account: 'github-actions@sbw-atm-website.iam.gserviceaccount.com'
+          credentials_json: '${{ secrets.GOOGLE_AUTH }}'
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
