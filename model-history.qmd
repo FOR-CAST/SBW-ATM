@@ -21,7 +21,7 @@ Today, SBW-ATM serves as an operational forecasting and backcasting tool that co
 
 For more information on supporting publications, see [Publications](publications.qmd).
 
-For more information on partnerships, see [About](about.md).
+For more information on partnerships, see [About](about.qmd).
 
 ## References
 
