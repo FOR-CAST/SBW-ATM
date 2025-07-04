@@ -20,7 +20,7 @@ Forecasts are made by simulation models provided by the system and are based on 
 - <https://cfs.nrcan.gc.ca/projects/133>
 - <https://github.com/RNCan/WeatherBasedSimulationFramework/wiki>
 
-### Model fomulation
+### Model formulation
 
 Conceptual diagram of the `SBW–pyATM` framework, including
 modelling procedure and data processing stream [@garcia2022].
@@ -29,7 +29,7 @@ modelling procedure and data processing stream [@garcia2022].
 flowchart TD
  A["NARR large-scale
  weather reanalyses"]
- B["Topography(dx < 1 km)"]
+ B["Topography (dx < 1 km)"]
  C["Landcover (dx < 1 km)"]
  D["WRF model T, P, Q, R, U, V, W
  (dx < 3 km; dt < 1 hr)"]
@@ -47,8 +47,8 @@ flowchart TD
  (dx = 1 km; dt = 10 min)"]
  J["SBW-pyATM ensemble
  post-processing
- (liftoff/landing locations,
- etc.)"]
+ (liftoff/landing
+ locations, etc.)"]
  K["Model evaluation +
  accuracy metrics"]
 
