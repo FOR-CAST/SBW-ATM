@@ -23,7 +23,7 @@ For more information on supporting publications, see [Publications](publications
 
 For more information on partnerships, see [About](about.qmd).
 
-## References
+## Relevant Literature
 
 <!-- bibliography is automatically generated; do not edit by hand -->
 
