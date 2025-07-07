@@ -79,7 +79,7 @@ purrr::walk2(
     
       ## 1. add USFS branding to animation files prior to 2025;
       ## 2. slow down animations;
-      logo_width <- 125 ## new logo width, in pixels
+      logo_width <- 200 ## new logo width, in pixels
       logo <- image_read("images/usfs.png") |> image_scale(as.character(logo_width))
       logo_height <- image_info(logo)$height
       gif <- image_read(destfile)
@@ -88,7 +88,8 @@ purrr::walk2(
       if (year < 2025) {
         frames <- image_apply(gif, function(frame) {
           frame_info <- image_info(frame)
-          offset <- glue::glue("+{frame_info$width - (logo_width + 25)}+{frame_info$height - (logo_height + 75)}")
+          offset <- paste0(glue::glue("+{frame_info$width - (logo_width + 10)}"),
+                           glue::glue("+{frame_info$height - (logo_height + 80)}"))
           image_composite(frame, logo, offset = offset)
         })
         image_write_gif(frames, path = destfile_tmp, delay = 1 / fps)
