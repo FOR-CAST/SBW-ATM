@@ -65,7 +65,7 @@ flowchart TD
 ```
 
 
-## References
+## Relevant Literature
 
 <!-- bibliography is automatically generated; do not edit by hand -->
 
