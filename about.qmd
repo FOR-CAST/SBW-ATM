@@ -7,11 +7,11 @@ editor_options:
 
 ## Program and Partnerships
 
-Forest insect dispersal can and often does cross international borders.
+Forest insects can and do disperse across international borders.
 To the extent that dispersal drives forest pest establishment and eruption, modelling dispersal is a critical part of spruce budworm population management.
 The importance of cross-border dispersal and large-scale eruption dynamics was the inspiration behind the "CANUSA" cooperative research agenda in the 1980s [@sanders1985].
 
-Beginning in 2004, with the imminent rise of the next spruce budworm outbreak, a new era of collaboration began between the United States Forest Service and the Canadian Forest Service, as Brian Sturtevant (USFS) and Barry Cooke (CFS) began investigating spruce budworm outbreak dynamics in the "Border Lakes" region of Minnesota and Ontario.
+Beginning in 2004, with the imminent rise of the next spruce budworm outbreak, a new era of collaboration began between the United States Department of Agriculture (USDA) Forest Service and the Canadian Forest Service (CFS), as Brian Sturtevant (USDA Forest Service) and Barry Cooke (CFS) began investigating spruce budworm outbreak dynamics in the "Border Lakes" region of Minnesota and Ontario.
 The Spruce Budworm ATM is one of many Border Lakes project outputs.
 
 This research was made possible through partnerships between the **Canadian Forest Service** and the **US Department of Agriculture Forest Service Research & Development**, fostered by the **Canada-US Forest Health Initiative "One Continent; One Forest; One Threat"** and the **Sustainable Forestry Initiative**, and supported financially by the **US Endowment for Forestry and Communities**.
@@ -64,10 +64,10 @@ This research was made possible through partnerships between the **Canadian Fore
 
 ### Contributors
 
-- Gary Achtemeier
-- Jay Charney
-- Dean Anderson
-- Johanne Delisle
+- Gary Achtemeier (USDA Forest Service, retired) 
+- Jay Charney (USDA Forest Service)
+- Dean Anderson (Landcare Research, New Zealand)
+- Johanne Delisle (Canadian Forest Service)
 
 ## References
 
