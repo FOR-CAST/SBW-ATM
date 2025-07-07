@@ -21,6 +21,14 @@ editor_options:
   chunk_output_type: console
 ---
 
+```{r setup, include = FALSE}
+## NOTE: several suggested packages used here indirectly;
+## library() calls included here to appease renv.
+if (FALSE) {
+  library(gifski)
+}
+```
+
 The spruce budworm (SBW) atmospheric transport model is an individual-based (or agent-based) modelling framework designed to simulate and understand the long-distance dispersal of adult SBW moths (_Choristoneura fumiferana_).
 This model is crucial for forecasting future larval defoliation in new areas, where moth immigration can enable populations to overcome local limitations and initiate or expand outbreaks, thereby supporting forest management decisions.
 Historically, large numbers of SBW moths have been observed to disperse over vast areas, covering distances up to 600 km (373 miles) from their origin.
