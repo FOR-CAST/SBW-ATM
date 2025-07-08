@@ -13,12 +13,12 @@ website:
     tracking-id: "G-WC21CZ2FX4"
     anonymize-ip: true
   open-graph: true
-  announcement:
-    icon: info-circle
-    dismissable: true
-    content: "This website is still under active development. Please report any issues to [achubaty@for-cast.ca](mailto:achubaty@for-cast.ca)"
-    type: primary
-    position: below-navbar
+  # announcement:
+  #   icon: info-circle
+  #   dismissable: true
+  #   content: "This website is still under active development. Please report any issues to [achubaty@for-cast.ca](mailto:achubaty@for-cast.ca)"
+  #   type: primary
+  #   position: below-navbar
   navbar:
     background: primary
     search: true
