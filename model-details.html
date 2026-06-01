@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Details – Spruce Budworm Atmospheric Transport Model</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -24,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -58,10 +60,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b1003d47855a52daee3e614d28ad9d9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c16c0575b2517d322fb1cc8ffd91505c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -144,7 +146,7 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -152,7 +154,7 @@ cookieconsent.run({
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./model-description.html"> 
+    <a class="nav-link active" href="./model-description.html" aria-current="page"> 
 <span class="menu-text">Model</span></a>
   </li>  
   <li class="nav-item">
@@ -190,7 +192,8 @@ cookieconsent.run({
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/sidebar-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./images/sidebar-logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./images/sidebar-logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -280,7 +283,7 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
 <section id="simulation-platform" class="level3">
 <h3 class="anchored" data-anchor-id="simulation-platform">Simulation platform</h3>
-<p>BioSIM <span class="citation" data-cites="regniere2014biosim10 regniere2017biosim11">(<a href="#ref-regniere2014biosim10" role="doc-biblioref">J. Régnière, Saint-Amant, and Béchard 2014</a>; <a href="#ref-regniere2017biosim11" role="doc-biblioref">J. Régnière et al. 2017</a>)</span> is a software tool designed to assist in the application of temperature-driven simulation models in pest management. It can also be used as a tool in the development and analysis of such models for purposes of scientific investigation. However, BioSIM’s main purpose is to generate forecasts of features or “events” in the seasonal biology of pests or their host plants. Forecasts are made by simulation models provided by the system and are based on regional air temperature and precipitation interpolated from nearby weather stations, adjusted for elevation and location differentials with regional gradients.</p>
+<p>BioSIM <span class="citation" data-cites="regniere2014biosim10 regniere2017biosim11">(<a href="#ref-regniere2014biosim10" role="doc-biblioref">Régnière et al. 2014</a>, <a href="#ref-regniere2017biosim11" role="doc-biblioref">2017</a>)</span> is a software tool designed to assist in the application of temperature-driven simulation models in pest management. It can also be used as a tool in the development and analysis of such models for purposes of scientific investigation. However, BioSIM’s main purpose is to generate forecasts of features or “events” in the seasonal biology of pests or their host plants. Forecasts are made by simulation models provided by the system and are based on regional air temperature and precipitation interpolated from nearby weather stations, adjusted for elevation and location differentials with regional gradients.</p>
 <ul>
 <li><a href="https://cfs.nrcan.gc.ca/projects/133" class="uri">https://cfs.nrcan.gc.ca/projects/133</a></li>
 <li><a href="https://github.com/RNCan/WeatherBasedSimulationFramework/wiki" class="uri">https://github.com/RNCan/WeatherBasedSimulationFramework/wiki</a></li>
@@ -288,7 +291,7 @@ cookieconsent.run({
 </section>
 <section id="model-formulation" class="level3">
 <h3 class="anchored" data-anchor-id="model-formulation">Model formulation</h3>
-<p>Conceptual diagram of the <code>SBW–pyATM</code> framework, including modelling procedure and data processing stream <span class="citation" data-cites="garcia2022">(<a href="#ref-garcia2022" role="doc-biblioref">Garcia et al. 2022</a>)</span>.</p>
+<p>Conceptual diagram of the <code>SBW–pyATM</code> framework, including modelling procedure and data processing stream <span class="citation" data-cites="garcia2022">(<a href="#ref-garcia2022" role="doc-biblioref"><span class="nocase">Garcia et al.</span> 2022</a>)</span>.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -341,15 +344,15 @@ cookieconsent.run({
 <section id="relevant-literature" class="level2">
 <h2 class="anchored" data-anchor-id="relevant-literature">Relevant Literature</h2>
 <!-- bibliography is automatically generated; do not edit by hand -->
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-achtemeier1998" class="csl-entry" role="listitem">
-Achtemeier, Gary L. 1998. <span>“A Framework for Standardizing Flight Characteristics for Separating Biology from Meteorology in Long-Range Insect Transport.”</span> In <em>The 23rd Conference on Agricultural &amp; Forest Meteorology, 13th Conference on Biometeorology and Aerobiology, and 2nd Urban Environment Symposium</em>, 360–63.
+Achtemeier, Gary L. 1998. <span>“A Framework for Standardizing Flight Characteristics for Separating Biology from Meteorology in Long-Range Insect Transport.”</span> <em>The 23rd Conference on Agricultural &amp; Forest Meteorology, 13th Conference on Biometeorology and Aerobiology, and 2nd Urban Environment Symposium</em>, 360–63.
 </div>
 <div id="ref-achtemeier2002" class="csl-entry" role="listitem">
-———. 2002. <span>“Interface Modeling for Predicting Atmospheric Transport of Biota.”</span> In <em>15th Conference on Biometeorology and Aerobiology Joint with the 16th International Congress on Biometeorology</em>, 204–8. Kansas City, Missouri.
+Achtemeier, Gary L. 2002. <span>“Interface Modeling for Predicting Atmospheric Transport of Biota.”</span> <em>15th Conference on Biometeorology and Aerobiology Joint with the 16th International Congress on Biometeorology</em> (Kansas City, Missouri), 204–8.
 </div>
 <div id="ref-blais1985" class="csl-entry" role="listitem">
-Blais, J. R. 1985. <span>“The Ecology of the Eastern Spruce Budworm: A Review and Discussion.”</span> In <em>Recent Advances in Spruce Budworms Research</em>, edited by C. J. Sanders, R. W. Stark, E. J. Mullins, and J. Murphy, 49–59. Bangor, Maine: Proceedings of the CANUSA Spruce Budworms Research Symposium.
+Blais, J. R. 1985. <span>“The Ecology of the Eastern Spruce Budworm: A Review and Discussion.”</span> In <em>Recent Advances in Spruce Budworms Research</em>, edited by C. J. Sanders, R. W. Stark, E. J. Mullins, and J. Murphy. Proceedings of the CANUSA Spruce Budworms Research Symposium.
 </div>
 <div id="ref-bouchard2014" class="csl-entry" role="listitem">
 Bouchard, M., and I. Auger. 2014. <span>“Influence of Environmental Factors and Spatio-Temporal Covariates During the Initial Development of a Spruce Budworm Outbreak.”</span> <em>Landscape Ecology</em> 29: 111–26.
@@ -364,13 +367,13 @@ Clark, W. C., and C. S. Holling. 1979. <span>“Process Models, Equilibrium Stru
 Cooke, B. J., and J. Régnière. 1996. <span>“An Object-Oriented, Process-Based Stochastic Simulation Model of Bt Efficacy Against Populations of Spruce Budworm Parasitized by <em>Apanteles Fumiferanae</em> Vier.”</span> <em>International Journal of Pest Management</em> 42: 291–306.
 </div>
 <div id="ref-cooke2025" class="csl-entry" role="listitem">
-———. 2025. <span>“The Unpredictably Eruptive Dynamics of Spruce Budworm Populations in Eastern Canada.”</span> <em>Population Ecology</em> 00: 00–00.
+Cooke, B. J., and J. Régnière. 2025. <span>“The Unpredictably Eruptive Dynamics of Spruce Budworm Populations in Eastern Canada.”</span> <em>Population Ecology</em> 00: 00–00.
 </div>
 <div id="ref-garcia2024" class="csl-entry" role="listitem">
-Garcia, M., B. R. Sturtevant, Y. Boulanger, et al. 2024. <span>“Modeling Weather-Driven Long-Distance Dispersal of Spruce Budworm Moths (Choristoneura Fumiferana). Part 2: Flight Model Calibration Using Radar Data.”</span> <em>Agricultural and Forest Meteorology</em> 357: 110210.
+<span class="nocase">Garcia, M., B. R. Sturtevant, Y. Boulanger, et al.</span> 2024. <span>“Modeling Weather-Driven Long-Distance Dispersal of Spruce Budworm Moths (Choristoneura Fumiferana). Part 2: Flight Model Calibration Using Radar Data.”</span> <em>Agricultural and Forest Meteorology</em> 357: 110210.
 </div>
 <div id="ref-garcia2022" class="csl-entry" role="listitem">
-Garcia, M., B. R. Sturtevant, R. Saint-Amant, et al. 2022. <span>“Modeling Weather-Driven Long-Distance Dispersal of Spruce Budworm Moths (Choristoneura Fumiferana). Part 1: Model Description.”</span> <em>Agricultural and Forest Meteorology</em> 315: 108815.
+<span class="nocase">Garcia, M., B. R. Sturtevant, R. Saint-Amant, et al.</span> 2022. <span>“Modeling Weather-Driven Long-Distance Dispersal of Spruce Budworm Moths (Choristoneura Fumiferana). Part 1: Model Description.”</span> <em>Agricultural and Forest Meteorology</em> 315: 108815.
 </div>
 <div id="ref-greenbank1957" class="csl-entry" role="listitem">
 Greenbank, D. O. 1957. <span>“The Role of Climate and Dispersal in the Initiation of Outbreaks of the Spruce Budworm in New Brunswick: II. The Role of Dispersal.”</span> <em>Canadian Journal of Zoology</em> 35: 385–403.
@@ -382,22 +385,22 @@ Greenbank, D., G. W. Schaefer, and R. C. Rainey. 1980. <span>“Spruce Budworm (
 Hardy, Y. J., A. Lafond, and L. Hamel. 1983. <span>“The Epidemiology of the Current Spruce Budworm Outbreak in Quebec.”</span> <em>Forest Science</em> 29: 715–25.
 </div>
 <div id="ref-irland1988" class="csl-entry" role="listitem">
-Irland, L. C., J. B. Dimond, J. L. Stone, J. Falk, and E. Baum. 1988. <span>“The Spruce Budworm Outbreak in Maine in the 1970’s–Assessment and Directions for the Future.”</span> Bulletin 819. Maine Agricultural Experiment Station.
+Irland, L. C., J. B. Dimond, J. L. Stone, J. Falk, and E. Baum. 1988. <em>The Spruce Budworm Outbreak in Maine in the 1970’s–Assessment and Directions for the Future</em>. Bulletin No. 819. Maine Agricultural Experiment Station.
 </div>
 <div id="ref-james2015" class="csl-entry" role="listitem">
-James, P. M. A., B. J. Cooke, B. M. T. Brunet, et al. 2015. <span>“Life-Stage Differences in Spatial Genetic Structure in an Irruptive Forest Insect: Implications for Dispersal and Spatial Synchrony.”</span> <em>Molecular Ecology</em> 24: 296–309.
+<span class="nocase">James, P. M. A., B. J. Cooke, B. M. T. Brunet, et al.</span> 2015. <span>“Life-Stage Differences in Spatial Genetic Structure in an Irruptive Forest Insect: Implications for Dispersal and Spatial Synchrony.”</span> <em>Molecular Ecology</em> 24: 296–309.
 </div>
 <div id="ref-james2025" class="csl-entry" role="listitem">
-James, P. M. A., J. T. Fang, J. Wittische, M. Cusson, J. Larroque, A. Roe, and R. C. Johns. 2025. <span>“Assigning Phenologically Asynchronous Moths to Source Populations Using Individual Genotypes.”</span> <em>Molecular Ecology</em> 0: e17832. <a href="https://doi.org/10.1111/mec.17832">https://doi.org/10.1111/mec.17832</a>.
+James, P. M. A., J. T. Fang, J. Wittische, et al. 2025. <span>“Assigning Phenologically Asynchronous Moths to Source Populations Using Individual Genotypes.”</span> <em>Molecular Ecology</em> 0: e17832. <a href="https://doi.org/10.1111/mec.17832">https://doi.org/10.1111/mec.17832</a>.
 </div>
 <div id="ref-johns2019" class="csl-entry" role="listitem">
-Johns, R. C., J. J. Bowden, D. R. Carleton, et al. 2019. <span>“A Conceptual Framework for the Spruce Budworm Early Intervention Strategy: Can Outbreaks Be Stopped?”</span> <em>Forests</em> 10: 910.
+<span class="nocase">Johns, R. C., J. J. Bowden, D. R. Carleton, et al.</span> 2019. <span>“A Conceptual Framework for the Spruce Budworm Early Intervention Strategy: Can Outbreaks Be Stopped?”</span> <em>Forests</em> 10: 910.
 </div>
 <div id="ref-johns2025" class="csl-entry" role="listitem">
 Johns, R. C., S. Edwards, D. T. Quiring, G. Moreau, and M. Stastny. 2025. <span>“How Much Additive Mortality Is Needed to Suppress an Outbreak?—a Neglected Question in Forest Insect Pest Management.”</span> <em>Annals of Applied Biology</em>, 1–10. <a href="https://doi.org/10.1111/aab.70003">https://doi.org/10.1111/aab.70003</a>.
 </div>
 <div id="ref-jones1974" class="csl-entry" role="listitem">
-Jones, D. D. 1974. <span>“Biology of the Budworm Model.”</span> Research Memorandum RM-74-003. Laxenburg, Austria: IIASA.
+Jones, D. D. 1974. <em>Biology of the Budworm Model</em>. Research Memorandum RM-74-003. IIASA.
 </div>
 <div id="ref-ludwig1978" class="csl-entry" role="listitem">
 Ludwig, D., D. D. Jones, and C. S. Holling. 1978. <span>“Qualitative Analysis of Insect Outbreak Systems: The Spruce Budworm and Forest.”</span> <em>Journal of Animal Ecology</em> 47: 315–32.
@@ -406,16 +409,16 @@ Ludwig, D., D. D. Jones, and C. S. Holling. 1978. <span>“Qualitative Analysis 
 MacLean, D. A. 1980. <span>“Vulnerability of Fir-Spruce Stands During Uncontrolled Spruce Budworm Outbreaks: A Review and Discussion.”</span> <em>Forestry Chronicle</em> 56: 213–21.
 </div>
 <div id="ref-maclean2019" class="csl-entry" role="listitem">
-MacLean, D. A., P. Amirault, L. Amos-Binks, D. Carleton, C. Hennigar, R. C. Johns, and J. Régnière. 2019. <span>“Positive Results of an Early Intervention Strategy to Suppress a Spruce Budworm Outbreak After Five Years of Trials.”</span> <em>Forests</em> 10: 448.
+MacLean, D. A., P. Amirault, L. Amos-Binks, et al. 2019. <span>“Positive Results of an Early Intervention Strategy to Suppress a Spruce Budworm Outbreak After Five Years of Trials.”</span> <em>Forests</em> 10: 448.
 </div>
 <div id="ref-maine2024" class="csl-entry" role="listitem">
-Maine Department of Agriculture, Conservation and Forestry. 2024. <span>“Forest and Shade Tree Insect and Disease Conditions for Maine, Summary 2023.”</span> Summary Report No. 34. Augusta, Maine: Maine Forest Service, Forest Health; Monitoring.
+Maine Department of Agriculture, Conservation and Forestry. 2024. <em>Forest and Shade Tree Insect and Disease Conditions for Maine, Summary 2023</em>. Summary Report No. 34. Maine Forest Service, Forest Health; Monitoring.
 </div>
 <div id="ref-quebec2023" class="csl-entry" role="listitem">
-Ministère des Ressources Naturelles et des Forêts. 2023. <span>“Aires Infestées Par La Tordeuse Des Bourgeons de l’épinette Au Québec En 2023.”</span> Québec: Gouvernement du Québec, Direction de la protection des forêts.
+Ministère des Ressources Naturelles et des Forêts. 2023. <em>Aires Infestées Par La Tordeuse Des Bourgeons de l’épinette Au Québec En 2023</em>. Gouvernement du Québec, Direction de la protection des forêts.
 </div>
 <div id="ref-minnesota2024" class="csl-entry" role="listitem">
-Minnesota Department of Natural Resources. 2024. <span>“Forest Health Annual Report 2024.”</span> St. Paul, MN: Forest Health Team.
+Minnesota Department of Natural Resources. 2024. <em>Forest Health Annual Report 2024</em>. Forest Health Team.
 </div>
 <div id="ref-morris1963" class="csl-entry" role="listitem">
 Morris, R. F., ed. 1963. <em>The Dynamics of Epidemic Spruce Budworm Populations</em>. Vol. 31. Memoirs of the Entomological Society of Canada.
@@ -430,46 +433,46 @@ Régnière, Jacques, Johanne Delisle, Brian R Sturtevant, Matthew Garcia, and R�
 Régnière, J., B. J. Cooke, A. Béchard, A. Dupont, and P. Therrien. 2019. <span>“Dynamics and Management of Rising Outbreak Spruce Budworm Populations.”</span> <em>Forests</em> 10 (9): 748.
 </div>
 <div id="ref-regniere2014biosim10" class="csl-entry" role="listitem">
-Régnière, J., R. Saint-Amant, and A. Béchard. 2014. <span>“BIOSIM 10 – User’s Manual.”</span> Inf. Rep. LAU-x-137E. Laurentian Forestry Centre, Québec: Natural Resources Canada, Canadian Forest Service.
+Régnière, J., R. Saint-Amant, and A. Béchard. 2014. <em>BIOSIM 10 – User’s Manual</em>. Inf. Rep. LAU-x-137E. Natural Resources Canada, Canadian Forest Service.
 </div>
 <div id="ref-regniere2017biosim11" class="csl-entry" role="listitem">
-Régnière, J., R. Saint-Amant, A. Béchard, and A. Moutaoufik. 2017. <span>“BioSIM 11 User’s Manual.”</span> Quebec, Canada: Natural Resources Canada, Canadian Forest Service.
+Régnière, J., R. Saint-Amant, A. Béchard, and A. Moutaoufik. 2017. <em>BioSIM 11 User’s Manual</em>. Natural Resources Canada, Canadian Forest Service.
 </div>
 <div id="ref-royama1984" class="csl-entry" role="listitem">
 Royama, T. 1984. <span>“Population Dynamics of the Spruce Budworm Choristoneura Fumiferana.”</span> <em>Ecological Monographs</em> 54: 429–62.
 </div>
 <div id="ref-royama1992" class="csl-entry" role="listitem">
-———. 1992. <em>Analytical Population Dynamics</em>. New York: Chapman; Hall.
+Royama, T. 1992. <em>Analytical Population Dynamics</em>. Chapman; Hall.
 </div>
 <div id="ref-sanders1979" class="csl-entry" role="listitem">
 Sanders, C. J. 1979. <span>“Pheromones and Dispersal in the Management of Eastern Spruce Budworm.”</span> <em>Mitteilungen Der Schweizerischen Entomologischen Gesellschaft</em> 52 (2/3): 223–26.
 </div>
 <div id="ref-sanders1985" class="csl-entry" role="listitem">
-Sanders, C. J., R. W. Stark, E. J. Mullins, and J. Murphy, eds. 1984. <em>Recent Advances in Spruce Budworms Research: Proceedings of the CANUSA Spruce Budworms Research Symposium</em>. Bangor, Maine: Canadian Forestry Service.
+Sanders, C. J., R. W. Stark, E. J. Mullins, and J. Murphy, eds. 1984. <em>Recent Advances in Spruce Budworms Research: Proceedings of the CANUSA Spruce Budworms Research Symposium</em>. Canadian Forestry Service.
 </div>
 <div id="ref-sanders1978flight" class="csl-entry" role="listitem">
 Sanders, CJ, DR Wallace, and GS Lucuik. 1978. <span>“Flight Activity of Female Eastern Spruce Budworm (Lepidoptera: Tortricidae) at Constant Temperatures in the Laboratory.”</span> <em>The Canadian Entomologist</em> 110 (6): 627–32.
 </div>
 <div id="ref-schaefer1976radar" class="csl-entry" role="listitem">
-Schaefer, GW. 1976. <span>“Radar Observations of Insect Flight.”</span> <em>Insect Flight</em>. Blackwell Oxford.
+Schaefer, GW. 1976. <span>“Radar Observations of Insect Flight.”</span> In <em>Insect Flight</em>, vol. 7. Blackwell Oxford.
 </div>
 <div id="ref-scott1987" class="csl-entry" role="listitem">
 Scott, R. W., and G. L. Achtemeier. 1987. <span>“Estimating Pathways of Migrating Insects Carried in Atmospheric Winds.”</span> <em>Environmental Entomology</em> 16 (6): 1244–54.
 </div>
 <div id="ref-sippell1985" class="csl-entry" role="listitem">
-Sippell, W. L. 1985. <span>“Historical Records Suggest a New International Strategy of Management for the Spruce Budworm in North America.”</span> In <em>Recent Advances in Spruce Budworms Research</em>, edited by C. J. Sanders, R. W. Stark, E. J. Mullins, and J. Murphy, 140–41.
+Sippell, W. L. 1985. <span>“Historical Records Suggest a New International Strategy of Management for the Spruce Budworm in North America.”</span> In <em>Recent Advances in Spruce Budworms Research</em>, edited by C. J. Sanders, R. W. Stark, E. J. Mullins, and J. Murphy.
 </div>
 <div id="ref-sturtevant2013" class="csl-entry" role="listitem">
 Sturtevant, B. R., G. L. Achtemeier, J. J. Charney, D. P. Anderson, B. J. Cooke, and P. A. Townsend. 2013. <span>“Long-Distance Dispersal of Spruce Budworm (Choristoneura Fumiferana Clemens) in Minnesota (USA) and Ontario (Canada) via the Atmospheric Pathway.”</span> <em>Agricultural and Forest Meteorology</em> 168: 186–200. <a href="https://doi.org/10.1016/j.agrformet.2012.09.008">https://doi.org/10.1016/j.agrformet.2012.09.008</a>.
 </div>
 <div id="ref-sturtevant2015" class="csl-entry" role="listitem">
-Sturtevant, B. R., B. J. Cooke, D. D. Kneeshaw, and D. A. MacLean. 2015. <span>“Modeling Insect Disturbance Across Forested Landscapes: Insights from the Spruce Budworm.”</span> In <em>Simulation Modeling of Forest Landscape Disturbances</em>, edited by A. H. Perera, B. R. Sturtevant, and L. J. Buse, 93–134. Cham: Springer International Publishing.
+Sturtevant, B. R., B. J. Cooke, D. D. Kneeshaw, and D. A. MacLean. 2015. <span>“Modeling Insect Disturbance Across Forested Landscapes: Insights from the Spruce Budworm.”</span> In <em>Simulation Modeling of Forest Landscape Disturbances</em>, edited by A. H. Perera, B. R. Sturtevant, and L. J. Buse. Springer International Publishing.
 </div>
 <div id="ref-sturtevant2014" class="csl-entry" role="listitem">
 Sturtevant, B. R., B. R. Miranda, P. T. Wolter, P. M. A. James, M.-J. Fortin, and P. A. Townsend. 2014. <span>“Forest Recovery Patterns in Response to Divergent Disturbance Regimes in the Border Lakes Region of Minnesota (USA) and Ontario (Canada).”</span> <em>Forest Ecology and Management</em> 313: 199–211.
 </div>
 <div id="ref-watt1963" class="csl-entry" role="listitem">
-Watt, K. E. F. 1963. <span>“The Analysis of the Survival of Large Larvae in the Unsprayed Area.”</span> In <em>Memoirs of the Entomological Society of Canada</em>, 95:52–63. 31.
+Watt, K. E. F. 1963. <span>“The Analysis of the Survival of Large Larvae in the Unsprayed Area.”</span> In <em>Memoirs of the Entomological Society of Canada</em>, vol. 95.
 </div>
 </div>
 
@@ -528,13 +531,14 @@ Watt, K. E. F. 1963. <span>“The Analysis of the Survival of Large Larvae in th
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
