@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c16c0575b2517d322fb1cc8ffd91505c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-af744b3df587370d7935e5c0596ab489.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -186,6 +186,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-dispersal-2026 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-filename','listing-file-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-filename","listing-file-modified"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-dispersal-2026'] = new List('listing-dispersal-2026', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WC21CZ2FX4"></script>
 
@@ -248,9 +276,9 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Dispersal – Spruce Budworm Atmospheric Transport Model">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://sbw-atm.insectforecasts.org/outputs/dispersal/2025/SBW_Flight_2025.gif">
+<meta property="og:image" content="https://sbw-atm.insectforecasts.org/outputs/dispersal/2026/SBW_Flight_2026.gif">
 <meta property="og:site_name" content="Spruce Budworm Atmospheric Transport Model">
-<meta property="og:image:alt" content="SBW_Flight_2025.gif">
+<meta property="og:image:alt" content="SBW_Flight_2026.gif">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -373,10 +401,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2025</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2024</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2023</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2022</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2026</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2025</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2024</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2023</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">2022</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/FOR-CAST/SBW-ATM/edit/main/simulations-dispersal.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FOR-CAST/SBW-ATM/blob/main/simulations-dispersal.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/FOR-CAST/SBW-ATM/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -406,12 +435,34 @@ window.Quarto = {
 <p>Representative animations of simulation outputs are presented here for the latest dispersal years.</p>
 <p><strong>Please refer to the <a href="./contact.html">Contact</a> page for data requests.</strong></p>
 <section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2025</h2>
+<h2 class="anchored" data-anchor-id="section">2026</h2>
+<div id="listing-dispersal-2026" class="quarto-listing quarto-listing-container-custom">
+
+<div class="list grid" style="column-gap: 10px;">
+
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-listing-file-modified-sort="1783119782319">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="./outputs/dispersal/2026/SBW_Flight_2026.gif" class="listing-title">SBW_Flight_2026.gif</a>
+      </small>
+    </div>
+    <a href="./outputs/dispersal/2026/SBW_Flight_2026.gif">
+      <img src="./outputs/dispersal/2026/SBW_Flight_2026.gif" alt="SBW_Flight_2026.gif" size="30%" class="card-img-top">
+    </a>
+  </div>
+
+</div>
+
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2025</h2>
 <div id="listing-dispersal-2025" class="quarto-listing quarto-listing-container-custom">
 
 <div class="list grid" style="column-gap: 10px;">
 
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-listing-file-modified-sort="1780344486366">
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-listing-file-modified-sort="1783119772124">
     <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
       <small class="card-text inline-block">
         <a href="./outputs/dispersal/2025/SBW_Flight_2025.gif" class="listing-title">SBW_Flight_2025.gif</a>
@@ -427,13 +478,13 @@ window.Quarto = {
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2024</h2>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">2024</h2>
 <div id="listing-dispersal-2024" class="quarto-listing quarto-listing-container-custom">
 
 <div class="list grid" style="column-gap: 10px;">
 
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-listing-file-modified-sort="1780344446687">
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-listing-file-modified-sort="1783119734357">
     <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
       <small class="card-text inline-block">
         <a href="./outputs/dispersal/2024/SBW_Flight_2024.gif" class="listing-title">SBW_Flight_2024.gif</a>
@@ -449,13 +500,13 @@ window.Quarto = {
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2">2023</h2>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3">2023</h2>
 <div id="listing-dispersal-2023" class="quarto-listing quarto-listing-container-custom">
 
 <div class="list grid" style="column-gap: 10px;">
 
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-listing-file-modified-sort="1780344421372">
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-listing-file-modified-sort="1783119710667">
     <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
       <small class="card-text inline-block">
         <a href="./outputs/dispersal/2023/SBW_Flight_2023.gif" class="listing-title">SBW_Flight_2023.gif</a>
@@ -471,13 +522,13 @@ window.Quarto = {
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3">2022</h2>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4">2022</h2>
 <div id="listing-dispersal-2022" class="quarto-listing quarto-listing-container-custom">
 
 <div class="list grid" style="column-gap: 10px;">
 
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-listing-file-modified-sort="1780344395592">
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-listing-file-modified-sort="1783119685786">
     <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
       <small class="card-text inline-block">
         <a href="./outputs/dispersal/2022/SBW_Flight_2022.gif" class="listing-title">SBW_Flight_2022.gif</a>
@@ -905,7 +956,7 @@ window.Quarto = {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>Copyright © 2025 Spruce Budworm Atmospheric Transport Model Team.<br> Website developed by <a href="https://for-cast.ca">FOR-CAST Research &amp; Analytics</a> using <a href="https://quarto.org">quarto</a>.</p>
+<p>Copyright © 2026 Spruce Budworm Atmospheric Transport Model Team.<br> Website developed by <a href="https://for-cast.ca">FOR-CAST Research &amp; Analytics</a> using <a href="https://quarto.org">quarto</a>.</p>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/FOR-CAST/SBW-ATM/edit/main/simulations-dispersal.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/FOR-CAST/SBW-ATM/blob/main/simulations-dispersal.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/FOR-CAST/SBW-ATM/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       &nbsp;
