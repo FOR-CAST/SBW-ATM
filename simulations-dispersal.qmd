@@ -17,6 +17,10 @@ listing:
     contents: outputs/dispersal/2025/*.gif
     page-size: 3
     template: gallery.ejs
+  - id: "dispersal-2026"
+    contents: outputs/dispersal/2026/*.gif
+    page-size: 3
+    template: gallery.ejs
 editor_options: 
   chunk_output_type: console
 ---
@@ -55,12 +59,13 @@ if (Sys.getenv("CI") == "true") {
 }
 
 drive_files <- data.frame(
-  year = 2022L:2025L,
+  year = 2022L:2026L,
   gid = c(
     "10KTAwZYCu8B5MHDbHSlNKwGS_UYJzL88", ## 2022 dispersal
     "15xLbxqNp9maGb92zvY3vg90VpGq2MCLI", ## 2023 dispersal
     "13A1qFtKew9i8IpbWAmCi3Yk5P-hEuOmr", ## 2024 dispersal
-    "1CzhM1L4XhaMKuarvEwvMuEoeoLgAuHQ2"  ## 2025 dispersal
+    "1CzhM1L4XhaMKuarvEwvMuEoeoLgAuHQ2", ## 2025 dispersal
+    "1xdLLlluI6trOkQVFL4HRa9BHvQVWwD4l"  ## 2026 dispersal
   )
 )
 this_year <- max(drive_files$year)
@@ -105,6 +110,11 @@ purrr::walk2(
   }
 )
 ```
+
+## 2026
+
+::: {#dispersal-2026}
+:::
 
 ## 2025
 

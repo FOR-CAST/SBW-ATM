@@ -15,3 +15,5 @@ outputs/
 # google credentials
 gha-creds-*.json
 sbw-atm-website-*.json
+
+**/*.quarto_ipynb

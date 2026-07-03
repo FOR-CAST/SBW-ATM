@@ -11,7 +11,7 @@ The SBW transport model (ATM) is an individual-based (or agent-based) modelling 
 Hourly simulations of insect phenology, moth emergence, takeoff, flight, and landing allow us to report on daily flight trajectories taken by individual moths.
 
 <!-- NOTE: use latest map here -->
-![Animation showing the latest recent spruce budworm dispersal simulation outputs. Results for previous dispersal years are [also available](simulations-dispersal.qmd).](outputs/dispersal/2025/SBW_Flight_2025.gif)
+![Animation showing the latest recent spruce budworm dispersal simulation outputs. Results for previous dispersal years are [also available](simulations-dispersal.qmd).](outputs/dispersal/2026/SBW_Flight_2026.gif)
 
 Historically, large numbers of SBW moths have been observed to disperse over vast areas, covering distances up to 600 km (373 miles) from their origin.
 Moths tend to move large distances in concentrated streams - "atmospheric rivers" - because of atmospheric transport.

@@ -60,8 +60,7 @@ You will need `git`, `R`, `RStudio`, and Quarto installed.
 - Animated images depicting simulation runs of the model are located in
   `outputs/` and organized by year;
 - Pages are rendered using the `.qmd` files (*NOTE:* this `README.qmd`
-  file and it’s rendered `REAADME.md` are not built as part of the
-  site);
+  file and it’s rendered `README.md` are not built as part of the site);
 - Bibliographic references are used by some pages, and may be referenced
   in several `.bib` files:
   - `publications.bib` lists all of the publications *using* the SBW-ATM
